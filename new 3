@@ -1,0 +1,43 @@
+USE Library
+--DROP DATABASE StudentDB
+
+CREATE TABLE book(
+ID int IDENTITY (1,1) PRIMARY KEY,
+book_id VARCHAR(10),
+book_name VARCHAR(10),
+writer_name VARCHAR(10),
+quantity int,
+dept VARCHAR(10),
+
+)
+select *From book
+
+CREATE TABLE students(
+ID int IDENTITY (1,1) PRIMARY KEY,
+student_id VARCHAR(20),
+student_name VARCHAR(30),
+Date VARCHAR(30),
+
+dept VARCHAR(20),
+
+)
+
+CREATE TABLE borrow(
+ID int IDENTITY (1,1) PRIMARY KEY,
+book_id VARCHAR(20),
+student_id VARCHAR(20),
+book_name VARCHAR(30),
+writer_name VARCHAR(20),
+Date VARCHAR(30),
+
+
+)
+select *from borrow
+Drop Table borrow
+
+
+
+
+select *From students
+
+Insert Into students(student_id,student_name,Date ,dept)Values ('CSE1520','Emon','Friday,September,2019','CSE')
